@@ -1,0 +1,19 @@
+.app-banner{
+  width:100%;
+  overflow:hidden;
+  .demo-carousel{
+    width:100%;
+    text-align: center;
+    background-color: #eadcc7;
+    height: 300px;
+    img{
+      max-width:100%;
+    }
+    &.c3{
+      background-color: #1b9bb5;
+    }
+    &.c4{
+      background-color: #b30038;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+.error-tips{
+  width: 666px;
+  margin: 15% auto 0;
+  text-align:center;
+  .err-inner{
+  	width:550px;
+  	height:420px;
+  	padding:60% 0 0;
+  	background: url(./images/404.png) center center no-repeat;
+  	margin: 0 auto ;
+  	font-size:15px;
+  }
+  .a-block{
+  	display: inline-block;margin-right:30px;
+  	text-decoration: underline;
+  }
+}
