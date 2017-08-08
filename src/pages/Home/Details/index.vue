@@ -22,6 +22,16 @@
   import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'detail-view',
+  mounted(){
+    let {_details} = this.$store.getters;
+    if(_details&&Object.keys(_details).length<=0){
+      let {id} = this.$route.query;
+      let {userToken} = this.$store.state.cookies;
+      this.$store.dispatch('details', { id,userToken }); 
+      console.log("no",_details);
+    }
+    console.log(this.$store.getters,_details);
+  },
   computed:{
     ...mapGetters({
       _details: '_details'

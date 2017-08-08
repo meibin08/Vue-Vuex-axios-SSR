@@ -43,7 +43,8 @@ var router = new Router({
 });
 // store.state.cookies
   
-router.beforeEach((to, from, next) => {
+  //已在 build => entry => client 页面处理
+/*router.beforeEach((to, from, next) => {
   //页面是是否要登录进入，在该处统一处理
   if (to.matched.some(r => r.meta.requireAuth)) {
       // let format
@@ -62,7 +63,7 @@ router.beforeEach((to, from, next) => {
   else {
       next();
   }
-});
+});*/
 
 export function createRouter () {
   return router;

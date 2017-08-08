@@ -25,6 +25,10 @@
 export default {
   name: 'home-view',
   components: { Banner },
+  mounted(){
+    let {id} = this.$route.query;
+    this.$store.dispatch('home', { id }); 
+  },
   computed:{
     //会把 home模块的state 跟主store合并，
     ...mapGetters({

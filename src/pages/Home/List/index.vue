@@ -39,6 +39,17 @@
   import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'list-view',
+  mounted(){
+    let {_list} = this.$store.getters;
+    if(_list&&_list.length<=0){
+      let {name} = this.$route.query;
+      let {userToken} = this.$store.state.cookies;
+
+      this.$store.dispatch('list', { name,userToken }); 
+      console.log(_list);
+    }
+    // 
+  },
   computed:{
     ...mapGetters({
       _list: '_list'
