@@ -1,9 +1,20 @@
 import Vue from 'vue'
+import 'html5-history-api'
 import 'es6-promise/auto'
 import { createApp } from './app'
 import format from 'src/utils/format'
 // import ProgressBar from './components/ProgressBar.vue'
 
+(function(){
+  // To enable support for HTML5-History-API polyfill in your library
+  
+  
+  // var location = window.history.location || window.location;
+  // you library code here
+  // ....http://localhost/home/details/230000201310178757?name=Barbara%20Allen#/home/details/230000201310178757?name=Barbara%20Allen
+  // ....
+  // ....
+})();
 // global progress bar
 // const bar = Vue.prototype.$bar = new Vue(ProgressBar).$mount()
 // document.body.appendChild(bar.$el)
@@ -28,9 +39,13 @@ const { app, router, store } = createApp()
 
 // prime the store with server-initialized state.
 // the state is determined during SSR and inlined in the page markup.
+
+
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)
 }
+
+
 
 // wait until router has resolved all async before hooks
 // and async components...
