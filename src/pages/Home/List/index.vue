@@ -6,7 +6,7 @@
     
     <Card :bordered="(index%2!=0?false:true)" v-for="(item, index) in _list" :key="item.id">
         <p slot="title">标题：{{item.title}}</p>
-        <router-link :to="{ path: '/home/details/'+item.id+'', params: { id: item.id },query:{name:currentName}}" class="a-block">
+        <a :href="'/home/details/' + item.id +'?name='+currentName" class="a-block">
         <Row>
           <Col span="2" >
             <img v-on:click.stop="open(getImg(item.number))" class="user-icon" v-bind:src="getImg(item.number)" >
@@ -21,7 +21,7 @@
           </i-circle>
           </Col>
       </Row>
-      </router-link>
+      </a>
     </Card>
      </section>
      <h1 v-else>请求出错</h1>

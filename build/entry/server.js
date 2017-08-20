@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const isDev = process.env.NODE_ENV !== 'production'
-
+const Status = { code: 0,url:"/notFound" };
 //
 const getCookie = cookies => {
   
@@ -51,6 +51,7 @@ export default context => {
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents()
       // no matched routes
+
       if (!matchedComponents.length) {
         reject({ code: 404,url:"/notFound" })
       };
@@ -64,10 +65,15 @@ export default context => {
       if (route.matched.some(r => r.meta.requireAuth)) {
         let {userToken} = context.cookies||{};
           if(!userToken||userToken=='') {
-            router.push({
+            console.log("111no matched routes");
+            Status.code = 2002;
+            Status.url = '/login?redirect='+fullPath;
+            /*reject({ url: '/login',query: { redirect: fullPath } })
+            return router.push({
               path: '/login',
               query: { redirect: fullPath }
             })
+            return false;*/
           };
       }
       // Call fetchData hooks on components matched by the route.
@@ -92,7 +98,7 @@ export default context => {
         resolve(app)
       }).catch((err)=>{
         console.log("entry 64",err)
-        reject(err&&err.code || { code: 0,url:"/notFound" })
+        reject(err&&err.code || Status)
       })
     }, reject)
   })
