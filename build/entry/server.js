@@ -94,6 +94,9 @@ export default context => {
         console.log("entry 64",err)
         reject(err&&err.code || { code: 0,url:"/notFound" })
       })
-    }, reject)
+    }, (error)=>{
+      console.log(98,"这里报错",error)
+      reject(error);
+    })
   })
 }

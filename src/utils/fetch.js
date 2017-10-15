@@ -44,7 +44,7 @@ axios.interceptors.response.use(
       return Promise.reject(response);
   },
   error => {
-    // console.log("57======================",error);
+    console.log("57======================",error);
 
 
       //单个、多个队列请求可统一在这里处理 登录失效等逻辑

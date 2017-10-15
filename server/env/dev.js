@@ -1,5 +1,5 @@
 module.exports = {
-  PORT: 80,
+  PORT: 8081,
   API : {
 
   	easy: {

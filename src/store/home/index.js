@@ -64,7 +64,7 @@ const actions = {
 	* @ 首页初始数据
 	*/
 		 return fetchSingle({url:'/api/test/homeList', data:{city: state.city}}).then(res=>{
-		// console.log(32,res);
+		// console.log(32,'首页初始数据',res);
 			if(res.code == 0){
 				 commit(SET_HOME, {home: res.data});
 			}else{
