@@ -38,7 +38,12 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|svg)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]?[hash]'
+        loader: 'file-loader?name=fonts/[name].[ext]?[hash]',
+        /*options: {
+          name: '[name].[hash:5].[ext]?[hash]',
+          outputPath: 'fonts/',
+          publicPath: 'https://github.com/meibin08/'
+        }*/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
