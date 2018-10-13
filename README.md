@@ -13,11 +13,13 @@
 	- 7)、引入了mock.js数据……
 	- 8)、其他还有很多细节，有兴趣的同学自己去慢慢发现吧……
  - 3、如果觉得该示例不错，对您有一定的帮助，记得帮  star、star、star  哦 ^_^ ^_^ ^_^ ^_^~~
+ - 想了解更多？——[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟-首席填坑官∙苏南")
 
 ****
 
-## 技术交流群
-- 群：[386485473](https://shang.qq.com/wpa/qunwpa?idkey=d44baf17512787eb0e4f268849a3239d6b9675145a606e21b9a055176bd1c0e2 "React\redux技术交流群")
+## 技术交流
+- 群：912594095、[386485473](https://shang.qq.com/wpa/qunwpa?idkey=d44baf17512787eb0e4f268849a3239d6b9675145a606e21b9a055176bd1c0e2 "技术交流群 @IT·平头哥联盟")
+- 博客：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟-首席填坑官∙苏南")
 
 ## 安装依赖包
 - npm install
@@ -32,7 +34,7 @@
 - npm start
 
 ## 想了解更多吗？
-- [请猛戳我吧！](https://github.com/meibin08 "更多示例")
+- [请猛戳我吧！](https://github.com/meibin08 "@IT·平头哥联盟,首席填坑官∙苏南,@IT·平头哥联盟-首席填坑官∙苏南")
 
 
 
